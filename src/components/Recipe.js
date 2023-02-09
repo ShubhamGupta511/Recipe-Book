@@ -1,15 +1,26 @@
 import React from 'react'
 
 
-const Recipe = () => {
+
+const Recipe = ({recipe}) => {
+
+ 
+
+
+
     return (
-        <div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="/" class="btn btn-primary">Go somewhere</a>
+        <div className='my-3 '>
+            <div className="card " onClick={()=>{window.open(recipe["recipe"]["url"])}} >
+                <img src={recipe["recipe"]['image']} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{recipe["recipe"]['label']}</h5>
+                    <p className="card-text"> Type  :  {recipe["recipe"]['mealType']}</p>
+                    <p className="card-text"> Source  :  {recipe["recipe"]['source']}</p>
+                    <p className="card-text"> Food Type : {recipe["recipe"]['cuisineType']}</p>
+                    <p className="card-text"> Diet Labels : {recipe["recipe"]['cuisineType']}</p>
+                    <p className="card-text"> Dish Type : {recipe["recipe"]['dishType']}</p>
+
+                    <a href="/" className="btn btn-primary">Save Recipe</a>
                 </div>
             </div>
         </div >

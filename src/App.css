@@ -1,0 +1,17 @@
+.container{
+  max-width: 50%;
+}
+
+.card{
+  width: 18rem;
+  
+}
+
+.card-gap{
+  gap: 50px;
+}
+
+.card-theme{
+  display: flex;
+  flex-direction: column;
+}
